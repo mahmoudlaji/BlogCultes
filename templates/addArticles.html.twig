@@ -1,0 +1,12 @@
+{% extends "layout/base.html.twig" %}
+
+{% block title%}New Article du Blog{% endblock %}
+{% block continueBlog %}
+
+    {{ form_start(form, {'attr': {'id': '', 'class': '', 'novalidate': 'novalidate'}}) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+
+
+{% endblock %}

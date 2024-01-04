@@ -1,0 +1,23 @@
+{% extends "layout/base.html.twig" %}
+
+{% block title%}Accuiel{% endblock %}
+
+{% block continueBlog %}
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+        <div class="col-lg-12 px-0">
+            <h2 class="display ">Culture From for All People</h2>
+
+        </div><br>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for articleB in articles %}
+
+                <div class="col">
+
+                    {% include  "layout/cardBlog.html.twig" with {article:articleB} %}
+
+                </div>
+
+            {% endfor %}
+        </div>
+        {{ knp_pagination_render(articles, null, {}, {'align': 'center'}) }}
+    {% endblock %}
